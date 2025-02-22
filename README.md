@@ -1,12 +1,11 @@
 # Ai-Tool_Analysis
-# AI Tool Usage Analysis with SQL
-# Overview
+## Overview
 ## This project analyzes AI tool usage trends, performance, and user engagement using SQL. The dataset contains information about AI tools, users, and interactions, including:
-# ✔ AI Tool Names and their performance metrics (queries, response time, ratings).
+✔ AI Tool Names and their performance metrics (queries, response time, ratings).
 
-# ✔ User Data (unique users, subscription types, and engagement levels).
+✔ User Data (unique users, subscription types, and engagement levels).
 
-# ✔ Usage Patterns across different time periods.
+✔ Usage Patterns across different time periods.
 
 # Problem Statement
 
@@ -25,15 +24,13 @@ As AI adoption grows, organizations need data-driven insights to optimize AI too
 
 
 SELECT * FROM ai_tool_analysis.ai_tool_usage;
-``` sql
-Find the Most Popular AI Tool (Total Queries) --
-
+``` sql Find the Most Popular AI Tool (Total Queries) 
  select ai_tool_name , sum(queries_made) AS Total_Queries
  from ai_tool_usage
  group by ai_tool_name
  order by Total_Queries desc;
+```
 
-sql```
 -- Find the AI Tool with the Fastest Response Time --
  
  select ai_tool_name , max(avg_response_time) AS Fastest_Response_Time
